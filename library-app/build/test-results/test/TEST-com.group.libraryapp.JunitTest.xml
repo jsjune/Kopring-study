@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.group.libraryapp.JunitTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-09-18T07:29:55" hostname="DESKTOP-7N2DEPQ" time="0.015">
+  <properties/>
+  <testcase name="test1()" classname="com.group.libraryapp.JunitTest" time="0.013"/>
+  <testcase name="test2()" classname="com.group.libraryapp.JunitTest" time="0.001"/>
+  <system-out><![CDATA[시작전
+test1
+test2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
