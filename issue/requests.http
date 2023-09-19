@@ -1,0 +1,51 @@
+### 이슈 등록
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+### 이슈 전체조회
+GET http://localhost:8080/api/v1/issues
+
+### 이슈 상세조회
+GET http://localhost:8080/api/v1/issues/1
+
+### 이슈 수정
+PUT http://localhost:8080/api/v1/issues/1
+Content-Type: application/json
+
+{
+  "summary": "테스트2",
+  "description": "테스트 내용2",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+### 이슈 삭제
+DELETE http://localhost:8080/api/v1/issues/1
+
+### 코멘트 등록
+POST http://localhost:8080/api/v1/issues/1/comments
+Content-Type: application/json
+
+{
+  "body": "코멘트1"
+}
+
+### 코멘트 수정
+PUT http://localhost:8080/api/v1/issues/1/comments/1
+Content-Type: application/json
+
+{
+  "body": "코멘트 수정"
+}
+
+### 코멘트 삭제
+DELETE http://localhost:8080/api/v1/issues/1/comments/1
