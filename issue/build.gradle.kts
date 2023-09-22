@@ -6,6 +6,7 @@ plugins {
     kotlin("jvm") version "1.7.22"
     kotlin("plugin.spring") version "1.7.22"
     kotlin("plugin.jpa") version "1.7.22"
+    kotlin("kapt") version "1.7.22"
 }
 
 java.sourceCompatibility = JavaVersion.VERSION_17
@@ -22,6 +23,8 @@ subprojects {
     apply(plugin = "kotlin")
     apply(plugin = "kotlin-spring")
     apply(plugin = "io.spring.dependency-management")
+    apply(plugin = "kotlin-kapt")
+
     dependencies {
         // JWT
         implementation("com.auth0:java-jwt:3.19.2")

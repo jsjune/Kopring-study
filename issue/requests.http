@@ -1,6 +1,45 @@
+
+
+### 회원 가입
+POST http://localhost:9090/api/v1/users/signup
+Content-Type: application/json
+
+{
+  "email": "aaa@aa.a",
+  "password": "1234",
+  "username": "test"
+}
+
+### 로그인
+POST http://localhost:9090/api/v1/users/signin
+Content-Type: application/json
+
+{
+  "email": "aaa@aa.a",
+  "password": "1234"
+}
+
+<> 2023-09-22T210059.200.json
+
+
+### 로그아웃
+DELETE http://localhost:9090/api/v1/users/logout
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXRoIiwiaXNzIjoiamFyYSIsImV4cCI6MTY5NTM3NjgyMiwiaWF0IjoxNjk1MzczMjIyLCJ1c2VySWQiOjEsImVtYWlsIjoiYWFhQGFhLmEiLCJ1c2VybmFtZSI6InRlc3QifQ.lEWovN6vRyZGUI7SkQOTHrsZB6e4PsgiwNdD5JrejM4
+
+
+### 내정보 조회
+GET http://localhost:9090/api/v1/users/me
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXRoIiwiaXNzIjoiamFyYSIsImV4cCI6MTY5NTM3NzY4MCwiaWF0IjoxNjk1Mzc0MDgwLCJ1c2VySWQiOjEsImVtYWlsIjoiYWFhQGFhLmEiLCJ1c2VybmFtZSI6InRlc3QifQ.J95Ygr0Lp1Yu1NKSsiUoTilT-dkn-eJ6h-TVIkshG5Q
+
+
+
+### 리포터 조회
+GET http://localhost:9090/api/v1/users/1/username
+
 ### 이슈 등록
 POST http://localhost:8080/api/v1/issues
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXRoIiwiaXNzIjoiamFyYSIsImV4cCI6MTY5NTM4NzY1OSwiaWF0IjoxNjk1Mzg0MDU5LCJ1c2VySWQiOjEsImVtYWlsIjoiYWFhQGFhLmEiLCJ1c2VybmFtZSI6InRlc3QifQ.4IIcETK76oJD4OLPtmZYeCJBN9c6bgzNM2Z-auneYy8
 
 {
   "summary": "테스트",
@@ -13,8 +52,10 @@ Content-Type: application/json
 ### 이슈 전체조회
 GET http://localhost:8080/api/v1/issues
 
+
 ### 이슈 상세조회
 GET http://localhost:8080/api/v1/issues/1
+
 
 ### 이슈 수정
 PUT http://localhost:8080/api/v1/issues/1
